@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THR</title>
+    <meta name="description" content="THR">
+    <meta property="og:title" content="THR" />
+    <meta property="og:description" content="THR">
+    <link rel="shortcut icon" type="image/x-icon" href="Card logo.png">    
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
+    <!-- SweetAlert2 CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body style="background-color: #f4e1ea; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Josefin Sans', sans-serif;">
+    <div class="box" style="background-color: rgb(230, 221, 221); border-radius: 15px; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); padding: 30px; width: 350px; text-align: center;">
+        <div class="payment">
+            <h3 style="color: #01787E; font-size: 20px; margin-bottom: 15px;">Ketupat lezat, opor menggoda,
+                Hari Lebaran penuh bahagia.
+                Tak ada jarak yang bisa menghalangi,
+                Silaturahmi tetap di hati ini.              
+                Selamat Idulfitri! 
+                Mohon maaf lahir dan batin. 😊🙏 </h3>
+            <p style="color:  #01787E; font-size: 16px; margin: 8px 0;">Bank BNI</p>
+            <p id="p1" style="color: #01787E; font-size: 18px; font-weight: bold; margin: 12px 0; position: relative; z-index: 1;"><b>1908542130</b></p>
+            <button class="copy" onclick="copyToClipboard('#p1')" style="background-color: #ff3e18; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">COPY</button>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(element) {
+            // Membuat elemen input sementara untuk menyalin teks
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+
+            // Menampilkan SweetAlert2 dengan ikon centang hijau
+            Swal.fire({
+                icon: 'success', // Ikon centang hijau
+                title: 'Berhasil!', // Judul notifikasi
+                text: 'Nomor rekening berhasil disalin!', // Pesan notifikasi
+                showConfirmButton: false, // Hilangkan tombol "OK"
+                timer: 2000 // Notifikasi akan hilang setelah 2 detik
+            });
+        }
+    </script>
+</body>
+</html>
